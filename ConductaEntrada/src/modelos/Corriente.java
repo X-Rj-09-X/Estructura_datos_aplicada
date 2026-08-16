@@ -8,37 +8,41 @@ package modelos;
  *
  * @author Ricardo J
  */
-public class Ahorro extends Cuenta{
+public class Corriente extends Cuenta{
     
-    private String fechaCreacion;
+    private double impuesto;
 
-    public Ahorro() {
+    
+    
+    public Corriente() {
     }
 
-    public Ahorro(String numeroCuenta, long dniCliente, double saldoActual, String fechaCreacion) {
+
+    public Corriente(String numeroCuenta, long dniCliente, double saldoActual, double impuesto) {
         super(numeroCuenta, dniCliente, saldoActual);
-        this.fechaCreacion = fechaCreacion;
+        this.impuesto = impuesto;
     }
 
-    public String getFechaCreacion() {
-        return fechaCreacion;
+    public double getImpuesto() {
+        return impuesto;
     }
 
-    public void setFechaCreacion(String fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
+    public void setImpuesto(double impuesto) {
+        this.impuesto = impuesto;
     }
 
     @Override
     public String toString() {
-        return "Ahorro{"
+        return "Corriente{"
                 + "numeroCuenta=" + getNumeroCuenta()
                 + ", dniCliente=" + getDniCliente()
                 + ", saldoActual=" + getSaldoActual()
-                + ", fechaCreacion=" + fechaCreacion
+                + ", impuesto=" + impuesto
                 + '}';
     }
     
-     
+    
+    
     
     
     
